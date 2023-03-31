@@ -1,10 +1,40 @@
 <!--
-* APCV 498 Senior Capstone - Fall 2022
+* APCV 498 Senior Capstone - Spring 2023
 * Virtual Tour: Historic Places & Structures
-* Team: Vivid Solutions
-* Members: Todd Bartfalvi, Christian Konazewski, Javier Mendez, Lety Sanchez, & Fan Shi
+* Team: Virtoural Solutions
+* Members: Ryan Bandrowski, Emerald Bismaputra, Pedro Briceno-Villegas, Carlos Gastelum
 * Professor: Henry Werchan
 -->
+<?php
+
+$hood = $_REQUEST["hood"];
+$site = $_REQUEST["site"];
+$hood_dir = "hoods/" . $hood;
+$site_dir = $hood_dir . "/sites";
+
+$fh = fopen($site_dir . "/" . $site . ".txt", "r");
+if ($fh) {
+  $name = explode(":",trim(fgets($fh)),2)[1];
+  $desc = explode(":",trim(fgets($fh)),2)[1];
+  $sig = explode(":",trim(fgets($fh)),2)[1];
+  $phys = explode(":",trim(fgets($fh)),2)[1];
+  $loc = explode(":",trim(fgets($fh)),2)[1];
+  $own = explode(":",trim(fgets($fh)),2)[1];
+  $style = explode(":",trim(fgets($fh)),2)[1];
+  $map = explode(":",trim(fgets($fh)),2)[1];
+}
+fclose($fh);
+
+$sites = array_diff(scandir($site_dir), array('.', '..'));
+
+$fh = fopen($hood_dir . "/info.txt", "r");
+if ($fh) {
+  $hood_name = explode(":",trim(fgets($fh)),2)[1];
+}
+fclose($fh);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +82,15 @@
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="nav-item dropdown">            
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Neighborhoods
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
+              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -64,7 +103,7 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <h1><a href="neighborhoods-wu.html">WEST UNIVERSITY</a></h1>
+        <h1><a href=<?= "neighborhoods.php?hood=".$hood ?>><?= strtoupper($hood_name) ?></a></h1>
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -79,53 +118,47 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="assets/img/properties/property-wu-fridena-house.jpg" alt="" class="img-fluid">
+                <img src=<?= "assets/img/properties/property-".$hood."-".$site.".jpg" ?> alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                Fridena House
+                <?= $name ?>
               </h2>
 
               <div class="entry-content">
                 <h6>Description:</h6>
                 <p>
-                  It was 1902 and the area had few homes when this American Victorian with Greek revival influences was built.
-                  Unusual features include post and beam frame construction, wide eaves articulated with large, scrolled brackets, and interior woodwork of redwood (painted).
-                  Its' first owners were Jacob and Mary Neil, bookkeepers for the Tucson Stables, just down the block on 6th Ave. James Clancy, an engineer for Southern Pacific, and his wife Florence, a public-school teacher, lived here from 1904-1929.
-                  In 1939 the late Dr. Thomas Fridena, a chiropractor, purchased the home.
-                  According to Dr. Adelaide Fridena who survives her husband, the home served as unofficial headquarters for the Tucson Democratic party during the 1960s when Thomas served in the state legislature.
-                  Dr. Fridena is noted for having introduced the first Civil Rights bill into the state legislature.
-                  In 1983 the house was purchased by DeeDee Samet and is being used for a law office.
+                  <?= $desc ?>
                 </p>
 
                 <h6>Statement of Significance:</h6>
                 <p>
-                  Significant because it was constructed during the territorial era. Architecturally significant.
+                  <?= $sig ?>
                 </p>
 
                 <h6>Physical Description:</h6>
                 <p>
-                  One and one-half story with a post and beam frame construction, a white stucco surface with green trim, a hip roof of rolled green roofing, a front pillared porch, and one chimney in excellent condition with additions.
+                  <?= $phys ?>  
                 </p>
 
                 <h6>Location:</h6>
                 <p>
-                  717 N 6th Ave, Tucson, AZ 85705<br>
-                  <a href="https://www.google.com/maps/place/717+N+6th+Ave,+Tucson,+AZ+85705/@32.2309098,-110.9712943,17z/data=!3m1!4b1!4m5!3m4!1s0x86d671197b18f5f1:0x21a6f3e1a2366db9!8m2!3d32.2309098!4d-110.9691003?hl=en&authuser=0" target="_blank">Open in Maps</a>
+                  <?= $loc ?><br>
+                  <a href=<?= "'" . $map . "'" ?> target="_blank">Open in Maps</a>
                 </p>
 
                 <h6>Owner:</h6>
                 <p>
-                  Adelaide Fridena
+                  <?= $own ?>
                 </p>
 
                 <h6>Style or Cultural Period:</h6>
                 <p>
-                  Mix of Anglo-Territorial and Italianate styles
+                  <?= $style ?>
                 </p>
 
                 <div class="read-more mb-4">
-                  <a href="neighborhoods-wu.html">Back to West University</a>
+                  <a href=<?= "neighborhoods.php?hood=" . $hood ?>><?= "Back to ".ucwords($hood_name) ?></a>
                 </div>
               </div>
 
@@ -150,60 +183,26 @@
 
               <h3 class="sidebar-title">Historic Places & Structures</h3>
               <div class="sidebar-item recent-posts">
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-baptist-church.jpg" alt="">
-                  <h4><a href="wu-sites-baptist-church.html">Baptist Church</a></h4>
-                </div>
+                <?php
+                foreach($sites as $file) {
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-bayless-house.jpg" alt="">
-                  <h4><a href="wu-sites-bayless-house.html">Bayless House</a></h4>
-                </div>
+                  $fh = fopen($site_dir . "/" . $file, "r");
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-big-blue-house.jpg" alt="">
-                  <h4><a href="wu-sites-big-blue-house.html">Big Blue House</a></h4>
-                </div>
+                  if ($fh) {
+                    $site_name = explode(":",trim(fgets($fh)),2)[1];
+                  }
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-drachman-house.jpg" alt="">
-                  <h4><a href="wu-sites-drachman-house.html">Drachman House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-fridena-house.jpg" alt="">
-                  <h4><a href="wu-sites-fridena-house.html">Fridena House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-historic-ywca.jpg" alt="">
-                  <h4><a href="wu-sites-historic-ywca.html">Historic YWCA</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-johnson-house.jpg" alt="">
-                  <h4><a href="wu-sites-johnson-house.html">Johnson House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-law-offices.jpg" alt="">
-                  <h4><a href="wu-sites-law-offices.html">Law Offices</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-mexican-consulate.jpg" alt="">
-                  <h4><a href="wu-sites-mexican-consulate.html">Mexican Consulate</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-overlock-house.jpg" alt="">
-                  <h4><a href="wu-sites-overlock-house.html">Overlock House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-time-market.jpg" alt="">
-                  <h4><a href="wu-sites-time-market.html">Time Market</a></h4>
-                </div>
+                  $site_var = explode(".", $file, 2)[0];
+                  $site_img = "assets/img/properties/property-" . $hood . "-" . $site_var . ".jpg";
+                  $site_link = "sites.php?hood=" . $hood . "&site=" . $site_var;
+                  ?>
+                  <div class="post-item clearfix">
+                    <img src=<?= $site_img ?> alt="">
+                    <h4><a href=<?= $site_link ?>><?= $site_name ?></a></h4>
+                  </div>
+                <?php
+                }
+                ?>
 
               </div><!-- End sidebar recent posts-->
 
@@ -230,7 +229,7 @@
           &copy; Copyright <strong><span>Virtual Tour: Historic Places & Structures</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href="#">Vivid Solutions</a>
+          Designed by <a href="#">Virtoural Solutions</a>
         </div>
       </div>
       <div class="social-links text-center text-lg-right pt-3 pt-lg-0">
@@ -250,6 +249,9 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

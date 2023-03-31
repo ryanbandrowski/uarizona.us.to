@@ -1,10 +1,28 @@
 <!--
-* APCV 498 Senior Capstone - Fall 2022
+* APCV 498 Senior Capstone - Spring 2023
 * Virtual Tour: Historic Places & Structures
-* Team: Vivid Solutions
-* Members: Todd Bartfalvi, Christian Konazewski, Javier Mendez, Lety Sanchez, & Fan Shi
+* Team: Virtoural Solutions
+* Members: Ryan Bandrowski, Emerald Bismaputra, Pedro Briceno-Villegas, Carlos Gastelum
 * Professor: Henry Werchan
 -->
+<?php
+
+$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "wu";
+$hood_dir = "hoods/" . $hood;
+$site_dir = $hood_dir . "/sites";
+$sites = array_diff(scandir($site_dir), array('.', '..'));
+
+$site_imgs = array_slice($sites, 0, 3);
+// YOU ARE HERE AUTOMATRING IMAGES FOR NEIGHBORHOOD LANDING PAGES, THEN DROPDOWN AND INDEX.PHP
+
+$fh = fopen($hood_dir . "/info.txt", "r");
+if ($fh) {
+  $hood_name = explode(":",trim(fgets($fh)),2)[1];
+}
+fclose($fh);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,6 +70,15 @@
           <li><a class="nav-link scrollto" href="index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="nav-item dropdown">            
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Neighborhoods
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
+              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -151,60 +178,26 @@
 
               <h3 class="sidebar-title">Historic Places & Structures</h3>
               <div class="sidebar-item recent-posts">
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-baptist-church.jpg" alt="">
-                  <h4><a href="wu-sites-baptist-church.html">Baptist Church</a></h4>
-                </div>
+                <?php
+                foreach($sites as $file) {
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-bayless-house.jpg" alt="">
-                  <h4><a href="wu-sites-bayless-house.html">Bayless House</a></h4>
-                </div>
+                $fh = fopen($site_dir . "/" . $file, "r");
 
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-big-blue-house.jpg" alt="">
-                  <h4><a href="wu-sites-big-blue-house.html">Big Blue House</a></h4>
-                </div>
+                if ($fh) {
+                    $site_name = explode(":",trim(fgets($fh)),2)[1];
+                }
 
+                $site_var = explode(".", $file, 2)[0];
+                $site_img = "assets/img/properties/property-" . $hood . "-" . $site_var . ".jpg";
+                $site_link = "sites.php?hood=" . $hood . "&site=" . $site_var;
+                ?>
                 <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-drachman-house.jpg" alt="">
-                  <h4><a href="wu-sites-drachman-house.html">Drachman House</a></h4>
+                    <img src=<?= $site_img ?> alt="">
+                    <h4><a href=<?= $site_link ?>><?= $site_name ?></a></h4>
                 </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-fridena-house.jpg" alt="">
-                  <h4><a href="wu-sites-fridena-house.html">Fridena House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-historic-ywca.jpg" alt="">
-                  <h4><a href="wu-sites-historic-ywca.html">Historic YWCA</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-johnson-house.jpg" alt="">
-                  <h4><a href="wu-sites-johnson-house.html">Johnson House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-law-offices.jpg" alt="">
-                  <h4><a href="wu-sites-law-offices.html">Law Offices</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-mexican-consulate.jpg" alt="">
-                  <h4><a href="wu-sites-mexican-consulate.html">Mexican Consulate</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-overlock-house.jpg" alt="">
-                  <h4><a href="wu-sites-overlock-house.html">Overlock House</a></h4>
-                </div>
-
-                <div class="post-item clearfix">
-                  <img src="assets/img/properties/property-wu-time-market.jpg" alt="">
-                  <h4><a href="wu-sites-time-market.html">Time Market</a></h4>
-                </div>
+                <?php
+                }
+                ?>
 
               </div><!-- End sidebar recent posts-->
 
@@ -251,6 +244,9 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

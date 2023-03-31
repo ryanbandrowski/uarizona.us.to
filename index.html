@@ -1,8 +1,8 @@
 <!--
-* APCV 498 Senior Capstone - Fall 2022
+* APCV 498 Senior Capstone - Spring 2023
 * Virtual Tour: Historic Places & Structures
-* Team: Vivid Solutions
-* Members: Todd Bartfalvi, Christian Konazewski, Javier Mendez, Lety Sanchez, & Fan Shi
+* Team: Virtoural Solutions
+* Members: Ryan Bandrowski, Emerald Bismaputra, Pedro Briceno-Villegas, Carlos Gastelum
 * Professor: Henry Werchan
 -->
 <!DOCTYPE html>
@@ -52,6 +52,15 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li class="nav-item dropdown">            
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Neighborhoods
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
+              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+            </div>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -81,14 +90,14 @@
                   <h6 class="text-uppercase">Neighborhoods</h6>
                   <h3>West University</h3>
                 </div>
-                                <div class="col-xl-4 social-links text-center text-lg-right pt-3 pt-lg-0">
-                                    <!-- Twitter and linkedin are not implemented yet, removing links -->
-                                    <!-- I've added the option to send an email -->
-                                    <!--<a href="#"><i class="bx bxl-twitter"></i></a>-->
-                                    <a id="link_facebook" href="#"><i class="bx bxl-facebook"></i></a>
-                                    <a id="link_instagram" href="#"><i class="bx bxl-instagram"></i></a>
-                                    <a id="#" href="mailto:wunatucson@gmail.com"><i class="bx bx-envelope"></i></a>
-                                </div>
+                  <div class="col-xl-4 social-links text-center text-lg-right pt-3 pt-lg-0">
+                      <!-- Twitter and linkedin are not implemented yet, removing links -->
+                      <!-- I've added the option to send an email -->
+                      <!--<a href="#"><i class="bx bxl-twitter"></i></a>-->
+                      <a id="link_facebook" href="#"><i class="bx bxl-facebook"></i></a>
+                      <a id="link_instagram" href="#"><i class="bx bxl-instagram"></i></a>
+                      <a id="#" href="mailto:wunatucson@gmail.com"><i class="bx bx-envelope"></i></a>
+                  </div>
               </div>
               <p>
                 Located between downtown and the University of Arizona, the neighborhood is one of the last vestiges of Tucson's heritage. West University was the first Tucson suburb north of the Southwestern Pacific railroad and was settled between 1890 and 1930. As Tucson grew, the neighborhood evolved from a suburb into a historic downtown neighborhood.
@@ -100,7 +109,7 @@
                 <img src="assets/img/properties/property-wu-baptist-church.jpg" class="img-fluid" alt="">
               </div>
               <div class="text-center">
-                <a href="neighborhoods-wu.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="neighborhoods.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -110,7 +119,7 @@
                 <div class="col-xl-12 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                   <div class="icon-box mt-4 mt-xl-0">
                     <div class="text-center">
-                      <a href="neighborhoods-wu.html" class="explore-btn">Explore all <strong>neighborhoods</strong> <i class="bi bi-geo-alt"></i></a>
+                      <a href="neighborhoods.php" class="explore-btn">Explore all <strong>neighborhoods</strong> <i class="bi bi-geo-alt"></i></a>
                     </div>
                     <p>There are tons of ways to experience Tucson, and Tucson neighborhood's historic structures are no exception.</p>
                     <!--THREE ICONS TO EXPLORE-->
@@ -165,7 +174,7 @@
               <div class="card-body">
                 <h5 class="card-title">Law Offices</h5>
                 <p class="card-text">Built in 1905 in the architectural Mission Revival style, this pretty pink house with its wrap-around porch and handsome arched windows is one story.</p>
-                <div class="read-more"><a href="wu-sites-law-offices.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=wu&site=law-offices"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>
@@ -175,7 +184,7 @@
               <div class="card-body">
                 <h5 class="card-title">Bayless House</h5>
                 <p class="card-text">In 1903 William Bayless, owner of the Carlink Ranch near Reddington, and his two sons Charles and John Stuart built this elegant residence.</p>
-                <div class="read-more"><a href="wu-sites-bayless-house.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=wu&site=bayless-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>
@@ -185,7 +194,7 @@
               <div class="card-body">
                 <h5 class="card-title">Drachman House</h5>
                 <p class="card-text">Built in1907, this American Victorian Bungalow is 1 1/2 stories, with a lava rock Tucson Mountain stone foundation, brick load-bearing walls, and beautiful gardens.</p>
-                <div class="read-more"><a href="wu-sites-drachman-house.html"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=wu&site=drachman-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>
@@ -226,6 +235,9 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
