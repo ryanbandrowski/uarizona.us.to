@@ -9,15 +9,19 @@
 
 $hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "wu";
 $hood_dir = "hoods/" . $hood;
+$hoods = array_diff(scandir("hoods/"), array('.', '..'));
 $site_dir = $hood_dir . "/sites";
 $sites = array_diff(scandir($site_dir), array('.', '..'));
-
-$site_imgs = array_slice($sites, 0, 3);
-// YOU ARE HERE AUTOMATRING IMAGES FOR NEIGHBORHOOD LANDING PAGES, THEN DROPDOWN AND INDEX.PHP
 
 $fh = fopen($hood_dir . "/info.txt", "r");
 if ($fh) {
   $hood_name = explode(":",trim(fgets($fh)),2)[1];
+  $img1 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $img2 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $img3 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p1 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p2 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p3 = trim(explode(":",trim(fgets($fh)),2)[1]);
 }
 fclose($fh);
 
@@ -75,8 +79,21 @@ fclose($fh);
               Neighborhoods
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
-              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+              <?php
+              foreach($hoods as $h) {
+                
+                $fh = fopen("hoods/".$h."/info.txt", "r");
+
+                if ($fh) {
+                  $h_name = trim(explode(":",trim(fgets($fh)),2)[1]);
+                }
+              ?>
+                <a class="dropdown-item" href=<?= "neighborhoods.php?hood=".$h ?>><?= ucwords($h_name) ?></a>
+              <?php
+              }
+              ?>
+              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=wu"></a> -->
+              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a> -->
             </div>
           </li>
         </ul>
@@ -106,52 +123,33 @@ fclose($fh);
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="assets/img/properties/property-wu-baptist-church.jpg" alt="" class="img-fluid">
+                <img src=<?= "assets/img/properties/property-".$hood."-".$img1.".jpg" ?> alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
-                West University
+                <?= ucwords($hood_name) ?>
               </h2>
 
               <div class="entry-content">
                 <p>
-                  Located between downtown and the University of Arizona, the neighborhood is one of the last vestiges of Tucson's heritage.
-                  West University was the first Tucson suburb north of the Southwestern Pacific railroad and was settled between 1890 and 1930.
-                  As Tucson grew, the neighborhood evolved from a suburb into a historic downtown neighborhood.
+                  <?= $p1 ?>
                 </p>
 
+                <img src=<?= "assets/img/properties/property-".$hood."-".$img2.".jpg" ?> class="img-fluid mb-4" alt="">
+
                 <p>
-                  The neighborhood includes more than 700 buildings in a great variety of architectural styles.
-                  Most of the styles arrived with the railroad in 1880.
-                  The West University Historic District contains more early Mission Revival style residences than is generally found elsewhere in Arizona.
-                  The West University Historic District is significant to architectural development in Tucson because of its range of styles, the unique character of each structure, and the many residences and public buildings designed by Tucson's most prominent architects of the period.
+                <?= $p2 ?>
                 </p>
 
-                <img src="assets/img/properties/property-wu-law-offices.jpg" class="img-fluid mb-4" alt="">
+                <img src=<?= "assets/img/properties/property-".$hood."-".$img3.".jpg" ?> class="img-fluid mb-4" alt="">
 
                 <p>
-                  About half of the houses in the neighborhood are bungalows.
-                  This style originated around 1900 in California as a hand-crafted wood style.
-                  In a short time, it became the first mass-produced, speculative residential form.
-                  Bungalow forms were dominant in the final two decades of development in the West University Historic District.
-                  The majority are modest one-story buildings, gabled, with doors and front porches.
-                  Since mechanical cooling systems were not generally used until after the 1930s, this style is particularly applicable to a desert climate by allowing a large attic ventilation space with decorative gable vents and dormers for air circulation.
-                  Bungalows also emphasized an indoor-outdoor living design that is compatible with Tucson's Southwestern climate.
-                  These homes represent a period when architects, contractors, and clients combined to design a home, modest or expensive, that gave a full expression of individuality in residences.
-                </p>
-
-                <img src="assets/img/properties/property-wu-drachman-house.jpg" class="img-fluid mb-4" alt="">
-
-                <p>
-                  With its ideal location, between the University of Arizona and downtown Tucson, the West University neighborhood has attracted many middle and upper-middle-class residents.
-                  As the City of Tucson expanded and the development of the West University neighborhood occurred, many of Tucson's most prominent citizens chose to build homes in the area.
-                  Many of these residences have remained in the same family or are still occupied by their original owners.
-                  People from all walks of life and with various economic statuses have lived here including musicians, composers, teachers, authors, judges, cattlemen, lawmen, journalists, architects, and mayors.
+                <?= $p3 ?>
                 </p>
 
                 <blockquote>
                   <p>
-                    Thank you for visiting our website and we hope you enjoy learning more about the rich history and culture of the West University neighborhood.
+                    <?= "Thank you for visiting our website and we hope you enjoy learning more about the rich history and culture of the ".ucwords($hood_name)." neighborhood." ?>
                   </p>
                 </blockquote>
 

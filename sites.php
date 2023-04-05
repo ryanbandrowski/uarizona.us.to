@@ -10,6 +10,7 @@
 $hood = $_REQUEST["hood"];
 $site = $_REQUEST["site"];
 $hood_dir = "hoods/" . $hood;
+$hoods = array_diff(scandir("hoods/"), array('.', '..'));
 $site_dir = $hood_dir . "/sites";
 
 $fh = fopen($site_dir . "/" . $site . ".txt", "r");
@@ -87,8 +88,21 @@ fclose($fh);
               Neighborhoods
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
-              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+              <?php
+              foreach($hoods as $h) {
+                
+                $fh = fopen("hoods/".$h."/info.txt", "r");
+
+                if ($fh) {
+                  $h_name = trim(explode(":",trim(fgets($fh)),2)[1]);
+                }
+              ?>
+                <a class="dropdown-item" href=<?= "neighborhoods.php?hood=".$h ?>><?= ucwords($h_name) ?></a>
+              <?php
+              }
+              ?>
+              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a> -->
+              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a> -->
             </div>
           </li>
         </ul>
@@ -121,25 +135,17 @@ fclose($fh);
                 <img src=<?= "assets/img/properties/property-".$hood."-".$site.".jpg" ?> alt="" class="img-fluid">
               </div>
 
-              <h2 class="entry-title">
-                <?= $name ?>
-              </h2>
+              <h2 class="entry-title"><?= $name ?></h2>
 
               <div class="entry-content">
                 <h6>Description:</h6>
-                <p>
-                  <?= $desc ?>
-                </p>
+                <p><?= $desc ?></p>
 
                 <h6>Statement of Significance:</h6>
-                <p>
-                  <?= $sig ?>
-                </p>
+                <p><?= $sig ?></p>
 
                 <h6>Physical Description:</h6>
-                <p>
-                  <?= $phys ?>  
-                </p>
+                <p><?= $phys ?></p>
 
                 <h6>Location:</h6>
                 <p>
@@ -148,14 +154,10 @@ fclose($fh);
                 </p>
 
                 <h6>Owner:</h6>
-                <p>
-                  <?= $own ?>
-                </p>
+                <p><?= $own ?></p>
 
                 <h6>Style or Cultural Period:</h6>
-                <p>
-                  <?= $style ?>
-                </p>
+                <p><?= $style ?></p>
 
                 <div class="read-more mb-4">
                   <a href=<?= "neighborhoods.php?hood=" . $hood ?>><?= "Back to ".ucwords($hood_name) ?></a>
