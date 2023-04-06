@@ -5,6 +5,26 @@
 * Members: Ryan Bandrowski, Emerald Bismaputra, Pedro Briceno-Villegas, Carlos Gastelum
 * Professor: Henry Werchan
 -->
+<?php
+
+$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "wu";
+$hood_dir = "hoods/" . $hood;
+$hoods = array_diff(scandir("hoods/"), array('.', '..'));
+$site_dir = $hood_dir . "/sites";
+
+$fh = fopen($hood_dir . "/info.txt", "r");
+if ($fh) {
+  $hood_name = explode(":",trim(fgets($fh)),2)[1];
+  $img1 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $img2 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $img3 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p1 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p2 = trim(explode(":",trim(fgets($fh)),2)[1]);
+  $p3 = trim(explode(":",trim(fgets($fh)),2)[1]);
+}
+fclose($fh);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,8 +63,8 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Virtual Tour: Historic Places & Structures</a></h1>
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="index.php">Virtual Tour: Historic Places & Structures</a></h1>
+        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
@@ -57,8 +77,19 @@
               Neighborhoods
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a>
-              <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a>
+							<?php
+							foreach($hoods as $h) {
+							
+							$fh = fopen("hoods/".$h."/info.txt", "r");
+
+							if ($fh) {
+								$h_name = trim(explode(":",trim(fgets($fh)),2)[1]);
+							}
+              ?>
+                <a class="dropdown-item" href=<?= "neighborhoods.php?hood=".$h ?>><?= ucwords($h_name) ?></a>
+              <?php
+              }
+              ?>
             </div>
           </li>
         </ul>
