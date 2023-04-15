@@ -7,7 +7,7 @@
 -->
 <?php
 
-$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "wu";
+$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "west-university";
 $hood_dir = "hoods/" . $hood;
 $hoods = array_diff(scandir("hoods/"), array('.', '..'));
 $site_dir = $hood_dir . "/sites";
@@ -65,13 +65,13 @@ fclose($fh);
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Virtual Tour: Historic Places & Structures</a></h1>
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="index.php">Virtual Tour: Historic Places & Structures</a></h1>
+        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li class="nav-item dropdown">            
@@ -92,8 +92,6 @@ fclose($fh);
               <?php
               }
               ?>
-              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=wu"></a> -->
-              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a> -->
             </div>
           </li>
         </ul>
@@ -108,7 +106,7 @@ fclose($fh);
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
-        <h1><a href="#">NEIGHBORHOODS</a></h1>
+        <h1><a href="#">NEIGHBORHOOD OVERVIEW</a></h1>
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -123,7 +121,7 @@ fclose($fh);
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src=<?= "assets/img/properties/property-".$hood."-".$img1.".jpg" ?> alt="" class="img-fluid">
+                <img src=<?= "assets/img/hoods/".$hood."/".$img1.".jpg" ?> alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title">
@@ -135,13 +133,13 @@ fclose($fh);
                   <?= $p1 ?>
                 </p>
 
-                <img src=<?= "assets/img/properties/property-".$hood."-".$img2.".jpg" ?> class="img-fluid mb-4" alt="">
+                <img src=<?= "assets/img/hoods/".$hood."/".$img2.".jpg" ?> class="img-fluid mb-4" alt="">
 
                 <p>
                 <?= $p2 ?>
                 </p>
 
-                <img src=<?= "assets/img/properties/property-".$hood."-".$img3.".jpg" ?> class="img-fluid mb-4" alt="">
+                <img src=<?= "assets/img/hoods/".$hood."/".$img3.".jpg" ?> class="img-fluid mb-4" alt="">
 
                 <p>
                 <?= $p3 ?>
@@ -186,8 +184,8 @@ fclose($fh);
                 }
 
                 $site_var = explode(".", $file, 2)[0];
-                $site_img = "assets/img/properties/property-" . $hood . "-" . $site_var . ".jpg";
-                $site_link = "sites.php?hood=" . $hood . "&site=" . $site_var;
+                $site_img = "assets/img/hoods/".$hood."/".$site_var.".jpg";
+                $site_link = "sites.php?hood=".$hood."&site=".$site_var;
                 ?>
                 <div class="post-item clearfix">
                     <img src=<?= $site_img ?> alt="">

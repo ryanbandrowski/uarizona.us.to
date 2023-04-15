@@ -7,7 +7,7 @@
 -->
 <?php
 
-$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "wu";
+$hood = array_key_exists("hood", $_REQUEST) ? $_REQUEST["hood"] : "west-university";
 $hood_dir = "hoods/" . $hood;
 $hoods = array_diff(scandir("hoods/"), array('.', '..'));
 $site_dir = $hood_dir . "/sites";
@@ -118,7 +118,7 @@ fclose($fh);
             <div class="content">
               <div class="row d-lg-flex py-4">
                 <div class="col-xl-8 me-lg-auto text-center text-lg-start">
-                  <h6 class="text-uppercase">Neighborhoods</h6>
+                  <h6 class="text-uppercase">Featured Neighborhood</h6>
                   <h3>West University</h3>
                 </div>
                   <div class="col-xl-4 social-links text-center text-lg-right pt-3 pt-lg-0">
@@ -137,7 +137,7 @@ fclose($fh);
                 The neighborhood includes more than 700 buildings in a great variety of architectural styles. Most of the styles arrived with the railroad in 1880. The West University Historic District contains more early Mission Revival style residences than is generally found elsewhere in Arizona. The West University Historic District is significant to architectural development in Tucson because of its range of styles, the unique character of each structure, and the many residences and public buildings designed by Tucson's most prominent architects of the period.
               </p>
               <div class="property-img">
-                <img src="assets/img/properties/property-wu-baptist-church.jpg" class="img-fluid" alt="">
+                <img src="assets/img/hoods/west-university/baptist-church.jpg" class="img-fluid" alt="">
               </div>
               <div class="text-center">
                 <a href="neighborhoods.php" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -201,31 +201,31 @@ fclose($fh);
         <div class="row row-cols-1 row-cols-md-3 g-4">
           <div class="col" data-aos="fade-up">
             <div class="card h-100">
-              <img src="assets/img/properties/property-wu-law-offices.jpg" class="card-img-top" alt="...">
+              <img src="assets/img/hoods/west-university/law-offices.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Law Offices</h5>
                 <p class="card-text">Built in 1905 in the architectural Mission Revival style, this pretty pink house with its wrap-around porch and handsome arched windows is one story.</p>
-                <div class="read-more"><a href="sites.php?hood=wu&site=law-offices"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=west-university&site=law-offices"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>
           <div class="col" data-aos="fade-up" data-aos-delay="100">
             <div class="card h-100">
-              <img src="assets/img/properties/property-wu-bayless-house.jpg" class="card-img-top" alt="...">
+              <img src="assets/img/hoods/west-university/bayless-house.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Bayless House</h5>
                 <p class="card-text">In 1903 William Bayless, owner of the Carlink Ranch near Reddington, and his two sons Charles and John Stuart built this elegant residence.</p>
-                <div class="read-more"><a href="sites.php?hood=wu&site=bayless-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=west-university&site=bayless-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>
           <div class="col" data-aos="fade-up" data-aos-delay="200">
             <div class="card h-100">
-              <img src="assets/img/properties/property-wu-drachman-house.jpg" class="card-img-top" alt="...">
+              <img src="assets/img/hoods/west-university/drachman-house.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Drachman House</h5>
                 <p class="card-text">Built in1907, this American Victorian Bungalow is 1 1/2 stories, with a lava rock Tucson Mountain stone foundation, brick load-bearing walls, and beautiful gardens.</p>
-                <div class="read-more"><a href="sites.php?hood=wu&site=drachman-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
+                <div class="read-more"><a href="sites.php?hood=west-university&site=drachman-house"><i class="bi bi-arrow-right"></i> Read More</a></div>
               </div>
             </div>
           </div>

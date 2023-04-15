@@ -74,13 +74,13 @@ fclose($fh);
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1><a href="index.html">Virtual Tour: Historic Places & Structures</a></h1>
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <h1><a href="index.php">Virtual Tour: Historic Places & Structures</a></h1>
+        <!-- <a href="index.php"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.php">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <li class="nav-item dropdown">            
@@ -101,8 +101,6 @@ fclose($fh);
               <?php
               }
               ?>
-              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=wu">West University</a> -->
-              <!-- <a class="dropdown-item" href="neighborhoods.php?hood=jp">Jefferson Park</a> -->
             </div>
           </li>
         </ul>
@@ -132,7 +130,7 @@ fclose($fh);
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src=<?= "assets/img/properties/property-".$hood."-".$site.".jpg" ?> alt="" class="img-fluid">
+                <img src=<?= "assets/img/hoods/".$hood."/".$site.".jpg" ?> alt="" class="img-fluid">
               </div>
 
               <h2 class="entry-title"><?= $name ?></h2>
@@ -150,7 +148,7 @@ fclose($fh);
                 <h6>Location:</h6>
                 <p>
                   <?= $loc ?><br>
-                  <a href=<?= "'" . $map . "'" ?> target="_blank">Open in Maps</a>
+                  <a href=<?= "'".$map."'" ?> target="_blank">Open in Maps</a>
                 </p>
 
                 <h6>Owner:</h6>
@@ -160,7 +158,7 @@ fclose($fh);
                 <p><?= $style ?></p>
 
                 <div class="read-more mb-4">
-                  <a href=<?= "neighborhoods.php?hood=" . $hood ?>><?= "Back to ".ucwords($hood_name) ?></a>
+                  <a href=<?= "neighborhoods.php?hood=".$hood ?>><?= "Back to ".ucwords($hood_name) ?></a>
                 </div>
               </div>
 
@@ -188,15 +186,15 @@ fclose($fh);
                 <?php
                 foreach($sites as $file) {
 
-                  $fh = fopen($site_dir . "/" . $file, "r");
+                  $fh = fopen($site_dir."/".$file, "r");
 
                   if ($fh) {
                     $site_name = explode(":",trim(fgets($fh)),2)[1];
                   }
 
                   $site_var = explode(".", $file, 2)[0];
-                  $site_img = "assets/img/properties/property-" . $hood . "-" . $site_var . ".jpg";
-                  $site_link = "sites.php?hood=" . $hood . "&site=" . $site_var;
+                  $site_img = "assets/img/hoods/".$hood."/".$site_var.".jpg";
+                  $site_link = "sites.php?hood=".$hood."&site=".$site_var;
                   ?>
                   <div class="post-item clearfix">
                     <img src=<?= $site_img ?> alt="">

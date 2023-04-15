@@ -1,0 +1,7 @@
+Neighborhood: Sam Hughes
+img-1: himmel-park-library
+img-2: sam-hughes-elementary
+img-3: N/A
+p1: N/A
+p2: N/A
+p3: N/A
