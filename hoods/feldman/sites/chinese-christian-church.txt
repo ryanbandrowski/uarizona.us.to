@@ -5,4 +5,4 @@ Physical Description: White house set as a church.
 Location: 307 E Helen St, Tucson, AZ 85705, United States
 Owner: Zhang Taiyan and Wu Xiaoyi
 Style or Cultural Period: Modern
-Map: 
+Map: https://www.google.com/maps/place/307+E+Helen+St,+Tucson,+AZ+85705/@32.2375803,-110.9694533,17z/data=!3m1!4b1!4m6!3m5!1s0x86d671111f223eef:0x7d85faae5acc32be!8m2!3d32.2375758!4d-110.9668784!16s%2Fg%2F11bw3zyy5k

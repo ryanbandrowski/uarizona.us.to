@@ -5,4 +5,4 @@ Physical Description: Painting on public mural
 Location: 1930 E Grant Rd, Tucson, AZ 85719
 Owner: Joe Pagac
 Style or Cultural Period: Painting
-Map: 
+Map: https://www.google.com/maps/place/1930+E+Grant+Rd,+Tucson,+AZ+85719/@32.2499005,-110.9445931,18z/data=!3m1!4b1!4m6!3m5!1s0x86d67198a20224b9:0xe3417a55f8ef2b4a!8m2!3d32.2498982!4d-110.9433056!16s%2Fg%2F11b8v69c_3

@@ -5,4 +5,4 @@ Physical Description: A facility with multiple studio apartments and dining room
 Location: 615 E Adams Street. Tucson, AZ 85705
 Owner: Linda Hollis
 Style or Cultural Period: Facility.
-Map: 
+Map: https://www.google.com/maps/place/615+E+Adams+St,+Tucson,+AZ+85705/@32.2413514,-110.964276,17z/data=!3m1!4b1!4m6!3m5!1s0x86d6710dfcaf430d:0xa054f4a5cb32d044!8m2!3d32.2413469!4d-110.9617011!16s%2Fg%2F11bw3yqd3r

@@ -2,7 +2,7 @@ Site: The Rialto Theaters
 Description: 
 Statement of Significance: 
 Physical Description: 
-Location: 
+Location: 318 E Congress St, Tucson, AZ 85701
 Owner: 
 Style or Cultural Period: 
-Map: 
+Map: https://www.google.com/maps/place/318+E+Congress+St,+Tucson,+AZ+85701/@32.2220309,-110.9690577,17z/data=!3m1!4b1!4m6!3m5!1s0x86d670e244076865:0xce49405b5b3f3654!8m2!3d32.2220264!4d-110.9664828!16s%2Fg%2F11c1y78j9w

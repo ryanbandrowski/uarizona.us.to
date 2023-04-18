@@ -5,4 +5,4 @@ Physical Description: Building and courtyards.
 Location: 1701 E Seneca St, Tucson, AZ 85719
 Owner: Tucson, AZ
 Style or Cultural Period: Educational Institution
-Map: 
+Map: https://www.google.com/maps/place/1701+E+Seneca+St,+Tucson,+AZ+85719/@32.2470095,-110.9489657,17z/data=!3m1!4b1!4m6!3m5!1s0x86d671a1bce1bde3:0x2d9527a851073a1c!8m2!3d32.247005!4d-110.9463908!16s%2Fg%2F11gw2xdfhw

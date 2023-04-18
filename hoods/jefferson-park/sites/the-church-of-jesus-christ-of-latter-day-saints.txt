@@ -5,4 +5,4 @@ Physical Description: Christian temple
 Location: 1540 E Linden St, Tucson, AZ 85719
 Owner: Russell M. Nelson
 Style or Cultural Period: Christian
-Map: 
+Map: https://www.google.com/maps/place/1540+E+Linden+St,+Tucson,+AZ+85719/@32.2444051,-110.9515256,17z/data=!3m1!4b1!4m6!3m5!1s0x86d671a0c1e2a8b1:0x5b5160d25ed3d88b!8m2!3d32.2444006!4d-110.9489507!16s%2Fg%2F11b8vdrfhs

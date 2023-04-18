@@ -5,4 +5,4 @@ Physical Description: A brick baptist church with three big white doors and larg
 Location: 445 E Speedway Blvd, Tucson, AZ 85705
 Owner: Ed Eddingfield
 Style or Cultural Period: Baptist church
-Map: 
+Map: https://www.google.com/maps/place/445+E+Speedway+Blvd,+Tucson,+AZ+85705/@32.2363973,-110.9674423,17z/data=!3m1!4b1!4m6!3m5!1s0x86d671105d2469f9:0xb115b45b65682483!8m2!3d32.2363928!4d-110.9648674!16s%2Fg%2F11b8z6qtht

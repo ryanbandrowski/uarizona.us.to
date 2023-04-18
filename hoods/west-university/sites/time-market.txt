@@ -5,4 +5,4 @@ Physical Description: One story with a post and beam construction, brick walls, 
 Location: 444 E University Blvd, Tucson, AZ 85705
 Owner: James & Ann Di Martino & Victor De Blasio
 Style or Cultural Period: Modern with Mission Front
-Map: https://www.google.com/maps/place/444+E+University+Blvd,+Tucson,+AZ+85705/@32.2314089,-110.9665025,17z/data=!3m1!4b1!4m5!3m4!1s0x86d6711b16e2fea1:0xfb319aa8e0303d4b!8m2!3d32.2314089!4d-110.9643085?hl=en&authuser=0
+Map: https://www.google.com/maps/place/444+E+University+Blvd,+Tucson,+AZ+85705/@32.2314736,-110.9643246,19z/data=!4m6!3m5!1s0x86d6711b16e2fea1:0xfb319aa8e0303d4b!8m2!3d32.2314089!4d-110.9643085!16s%2Fg%2F11b8yhh1wx

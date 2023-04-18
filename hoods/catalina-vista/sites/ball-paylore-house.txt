@@ -5,4 +5,4 @@ Physical Description: Characterized by an angular open carport, mortar-washed br
 Location: 2306 E Waverly St, Tucson, AZ 85719
 Owner: Tucson Historic Preservation Foundation
 Style or Cultural Period: Modern
-Map: 
+Map: https://www.google.com/maps/place/2306+E+Waverly+St,+Tucson,+AZ+85719/@32.2452652,-110.9381541,17z/data=!3m1!4b1!4m6!3m5!1s0x86d671bca8d61f5f:0xc472489192c8eaf7!8m2!3d32.2452652!4d-110.9381541!16s%2Fg%2F11c24pygzb

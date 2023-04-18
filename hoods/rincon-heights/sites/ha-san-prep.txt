@@ -5,4 +5,4 @@ Physical Description: A facility with triangular roofs and a big squared window.
 Location: 1333 E 10th St, Tucson, AZ 85719
 Owner: Ha:Sañ Educational Services
 Style or Cultural Period: Modern
-Map: 
+Map: https://www.google.com/maps/place/1333+E+10th+St,+Tucson,+AZ+85719/@32.2227785,-110.953834,17z/data=!3m1!4b1!4m6!3m5!1s0x86d670ff65c7056f:0x72238ccb397f67f3!8m2!3d32.222774!4d-110.9512591!16s%2Fg%2F11c43t99mh

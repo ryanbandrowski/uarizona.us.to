@@ -5,4 +5,4 @@ Physical Description: A black squared building titled ‘The Rock’ in red lett
 Location: 136 N Park Ave, Tucson, AZ 85719
 Owner: Kent Van Stelle
 Style or Cultural Period: Venue
-Map: 
+Map: https://www.google.com/maps/place/136+N+Park+Ave,+Tucson,+AZ+85719/@32.2234303,-110.9586871,17z/data=!3m1!4b1!4m6!3m5!1s0x86d670fe7a4180b9:0xbc3c76c467107931!8m2!3d32.2234258!4d-110.9561122!16s%2Fg%2F11c3q3q0xw

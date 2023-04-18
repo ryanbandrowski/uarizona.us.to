@@ -5,4 +5,4 @@ Physical Description: Buddhist temple with a shrine room.
 Location: 1038 E. Lester St., Tucson, AZ
 Owner: Thomas Cox
 Style or Cultural Period: Buddhist.
-Map: 
+Map: https://www.google.com/maps/place/1038+E+Lester+St,+Tucson,+AZ+85719/@32.2434597,-110.9583251,17z/data=!3m1!4b1!4m6!3m5!1s0x86d6710b92576e85:0x5cf6ed93538fa004!8m2!3d32.2434552!4d-110.9557502!16s%2Fg%2F11c18h8wdj
