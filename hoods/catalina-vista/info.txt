@@ -2,6 +2,6 @@ Neighborhood: Catalina Vista
 img-1: ball-paylore-house
 img-2: whale-mural
 img-3: N/A
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Catalina Vista is a charming neighborhood east of the University of Arizona. The neighborhood is popular with both students and teachers because of its proximity to the university. The area is home to a mix of midcentury and ranch style homes, many of which have been beautifully renovated over the years. The neighborhood is known for its lush landscapes and tree-lined streets, giving it a quiet residential feel ideal for families and those who prefer a quieter lifestyle.
+p2: In addition to beautiful homes, Catalina Vista also has several community parks, including the popular Himmel Park. This 20-acre park has a playground, basketball and tennis courts, and a swimming pool, making it a great place to spend a sunny afternoon. The park is also home to the Haven Park Library, which offers a variety of programs and activities for children and adults throughout the year. With beautiful green spaces and excellent community amenities, Catalina Vista is the perfect place to call home for anyone looking to make the most of Tucson.
+p3: Overall, Catalina Vista is a highly attractive neighborhood with a unique blend of residential charm and urban convenience. With its prime location, beautiful homes, and excellent community facilities, it's no wonder this district is popular with both students and long-term residents. Whether you're looking for a quiet place to call home or a vibrant community to explore, Catalina Vista has something for everyone. 

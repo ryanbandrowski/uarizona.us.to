@@ -2,6 +2,6 @@ Neighborhood: Pie Allen
 img-1: rialto-theater
 img-2: N/A
 img-3: N/A
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Pie Allen is a charming neighborhood just south of the University of Arizona campus in Tucson. This historic district has a unique blend of architectural styles and cultural influences that reflect its long and fascinating history. Originally known as the "University Addition," Pie Allen was installed in 1906 and quickly became a coveted place for university faculty.
+p2: The district is named for George F. Pie, a prominent attorney who purchased a large plot of land in the area in the early 1900s. Py Allen is home to many historic buildings, including Tucson High School, built in 1907 and listed on the National Register of Historic Places. The area has a mix of architectural styles, including bungalows, Tudor and Spanish houses, many of which were built in his early 20th century.
+p3: Pie Allen is known for its vibrant and diverse community. Many artists, musicians, and students live here, but there are also families and longtime residents. Several popular local attractions are nearby, including the Tucson Botanical Gardens and the Arizona-Sonora Desert Museum. Pie Allen residents also have easy access to the University of Arizona campus, making it a convenient location for students, faculty, and staff. Overall, Pie Allen is a vibrant and unique neighborhood with a rich history and strong sense of community.  
