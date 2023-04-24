@@ -2,6 +2,6 @@ Neighborhood: Feldman's
 img-1: first-southern-baptist-church
 img-2: la-vita-house
 img-3: chinese-christian-church
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Feldman is a neighborhood south of the University of Arizona and west of downtown Tucson. Developed in the early 20th century, it is now known for its charming bungalow-style homes and tree-lined streets. The neighborhood's proximity to the university makes it popular with students and faculty who want to live off-campus but still be within walking distance of it.
+p2: Known for his strong community spirit and active neighborhood associations, Feldman regularly hosts events and works to preserve the area's historic buildings. Many of the neighborhood homes have been lovingly restored and well maintained, giving them a unique charm and character. The neighborhood is home to many small businesses, including cafes, restaurants, and specialty stores, giving it a lively and lively atmosphere.
+p3: One of Feldman's most notable features is its historic designation, which recognizes the neighborhood's unique architecture and rich history. The district is home to a mix of architectural styles popular in the early 20th century, including Bungalow, Tudor His Revival, and Mediterranean Revival. Designed by prominent Tucson architects such as Henry Jaastad and Roy Place, many of the area's homes are now considered important examples of the city's architectural heritage. Overall, Feldman is a charming, historic neighborhood that offers residents a unique blend of small-town charm and urban convenience. 

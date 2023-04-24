@@ -2,6 +2,6 @@ Neighborhood: Iron Horse
 img-1: new-empire
 img-2: buffet
 img-3: N/A
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Iron Horse is a historic district east of downtown Tucson and adjacent to the University of Arizona. The district is known for its charming bungalows, artisan homes, and early 20th-century historic buildings. The area was originally settled by railroad workers who built bungalow-style homes to house their families. Today, Iron Horse is a highly desirable neighborhood for those who want to live in a walkable urban setting with easy access to dining, shopping and cultural attractions.
+p2: One of the Iron Horse District's most notable features is its proximity to the University of Arizona. Many students, faculty and staff choose to live nearby due to its easy access to the campus. Plus, The Iron Horse is just a short walk or bike ride from downtown Tucson, where you'll find a variety of dining, shopping, and entertainment options. There are also several parks nearby, including Himmelpark with tennis courts, playgrounds and swimming pools.
+p3: Iron Horse is a close-knit community that values ​​its historic roots and works to preserve its unique character. Neighborhood Associations are actively involved in sponsoring community events and providing resources to residents. Each year, Iron Horse hosts an annual home tour to showcase the neighborhood's historic buildings and raise funds for community projects. There are also several community gardens nearby, where residents can grow their own fruits and vegetables and network with neighbors. Overall, Iron Horse is a vibrant and dynamic neighborhood that offers a unique blend of history, culture and community. 
