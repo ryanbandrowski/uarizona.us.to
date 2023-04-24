@@ -2,6 +2,6 @@ Neighborhood: Rincon Heights
 img-1: mansfeld-middle
 img-2: the-rock
 img-3: ha-san-prep
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Rincon Heights is a historic neighborhood south of the University of Arizona. The neighborhood gets its name from the nearby Rincon Mountains, which are visible from many streets in the area. The community was first developed in the 1920s and his 1930s and its proximity to the university and downtown Tucson made it a very desirable place to live. The area is known for its beautiful tree-lined streets, historic homes, and diverse population.
+p2: The architecture of Rincon Heights is a mix of Spanish Colonial Revival, bungalow and ranch styles. Many of the nearby homes were built in the 1920s and 1930s and their designs reflect the style of the period. The neighborhood streets are narrow and winding, adding to the charm and character of the area. In recent years, Rincon Heights has become popular with families, young professionals, and retirees looking for a quiet residential neighborhood close to city comforts.
+p3: One of Rincon Heights' unique features is its active community associations, which work to preserve the neighborhood's historic character and encourage community participation. The association sponsors events such as block parties, neighborhood cleanups, and holiday celebrations. Additionally, the association works with the city to ensure that the redevelopment of the area is consistent with the neighborhood's historic character. Rincon Heights is a close-knit community that values ​​its history and works to maintain its own identity as a vibrant and welcoming place. 

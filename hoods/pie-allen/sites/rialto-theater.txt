@@ -1,8 +1,8 @@
-Site: The Rialto Theaters
-Description: 
-Statement of Significance: 
-Physical Description: 
+Site: The Rialto Theatre
+Description: The Rialto Theatre is a historic performing arts venue in Tucson's Py Allen District near the University of Arizona. Originally built as a cinema in the 1920s, the theater became a live venue in the 1980s. Today, the Rialto is the center of Tucson's vibrant arts scene, hosting a variety of concerts, theater productions, comedy shows and other cultural events throughout the year. In addition to regular performances, the Rialto plays an important role in supporting the local community. The theater regularly hosts benefit concerts and fundraising events for local organizations and charities, and has been a major supporter of downtown Tucson's revitalization efforts. Whether you're a longtime Tucson resident or new to the area, the Rialto Theater is a must-see for anyone interested in the arts. With its rich history, stunning architecture, and diverse events, the Rialto is truly one of Tucson's cultural gems.
+Statement of Significance: One of Tucson's first movie theaters, over 100 years old.
+Physical Description: Similar in appearance to Hotel Congress across the street. It was built in the same year by the same contractors. It has a large marquee out front with a tall sign that says Rialto. 
 Location: 318 E Congress St, Tucson, AZ 85701
-Owner: 
-Style or Cultural Period: 
+Owner: City of Tucson
+Style or Cultural Period: Art Nouveau
 Map: https://www.google.com/maps/place/318+E+Congress+St,+Tucson,+AZ+85701/@32.2220309,-110.9690577,17z/data=!3m1!4b1!4m6!3m5!1s0x86d670e244076865:0xce49405b5b3f3654!8m2!3d32.2220264!4d-110.9664828!16s%2Fg%2F11c1y78j9w

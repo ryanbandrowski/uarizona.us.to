@@ -2,6 +2,6 @@ Neighborhood: Sam Hughes
 img-1: himmel-park-library
 img-2: sam-hughes-elementary
 img-3: N/A
-p1: N/A
-p2: N/A
-p3: N/A
+p1: Sam Hughes is a historic neighborhood east of the University of Arizona in Tucson. Named after the man who fragmented the area in the early 20th century, the town is known for its beautiful tree-lined streets and unique homes. The neighborhood is a mix of historic homes and modern architecture in a variety of styles, including Spanish Colonial, Mediterranean, and Art Deco. Many of the houses were built from his 1920s to his 1950s and have been lovingly restored and preserved.
+p2: Sam Hughes is a very popular neighborhood due to its central location and historic charm. Residents can walk or bike to the University of Arizona and enjoy a variety of shopping, dining, and entertainment options in nearby downtown. There are also several parks and green spaces nearby, including Himmelpark with playgrounds, tennis courts and public swimming pools. The Sam Hughes Neighborhood Association is very active, organizing community events and working to preserve the neighborhood's historic features.
+p3: Sam Hughes is a neighborhood with a rich history and a strong sense of community. A variety of people live here, including families, students, and working adults. With its beautiful homes, central location, and strong community spirit, it's no wonder Sam Hughes is one of Tucson's most desirable neighborhoods.
